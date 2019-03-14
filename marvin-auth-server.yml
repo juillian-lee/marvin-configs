@@ -17,7 +17,7 @@ security:
   jwt:
     # Gerando certificados assinados jks: https://dzone.com/articles/creating-self-signed-certificate
     # key-store: file://${user.home}/config-repo/keystore.jks // pega da naquina local
-    key-store: http://localhost:9090/marvin-auth-server/default/master/keystore.jks
+    key-store: classpath:keystore.jks
     key-store-password: letmein
     key-pair-alias: mytestkey
     key-pair-password: changeme
