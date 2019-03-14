@@ -16,7 +16,7 @@ eureka:
 security:
   jwt:
     # Gerando certificados assinados jks: https://dzone.com/articles/creating-self-signed-certificate
-    key-store: classpath:keystore.jks
+    key-store: file://${user.home}/config-repo/keystore.jks
     key-store-password: letmein
     key-pair-alias: mytestkey
     key-pair-password: changeme
