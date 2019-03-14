@@ -13,20 +13,25 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
+security:
+  jwt:
+    # Gerando certificados assinados jks: https://dzone.com/articles/creating-self-signed-certificate
+    key-store: classpath:keystore.jks
+    key-store-password: letmein
+    key-pair-alias: mytestkey
+    key-pair-password: changeme
 spring:
     datasource:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        password: 'senharoot'
-        username: root
-        platform: mysql
-        url: jdbc:mysql://localhost:3306/oauth2_database?useSSL=false
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      password: senharoot
+      username: root
+      platform: mysql
+      url: jdbc:mysql://localhost:3306/oauth2_jwt_server?useSSL=false
     jpa:
-        database-platform: org.hibernate.dialect.MySQLDialect
-        generate-ddl: false
-        hibernate:
-            naming:
-              physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
-            ddl-auto: validate
-        show-sql: true
-
-check-user-scopes: true
+      database-platform: org.hibernate.dialect.MySQLDialect
+      generate-ddl: false
+      hibernate:
+        naming:
+          physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        ddl-auto: validate
+      show-sql: true
