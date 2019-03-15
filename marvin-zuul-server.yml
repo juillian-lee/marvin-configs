@@ -22,3 +22,7 @@ zuul:
       path: /produtos/**
       serviceId: marvin-produto-server
       strip-prefix: false
+    oauth:
+      path: /oauth/**
+      serviceId: marvin-auth-server
+      strip-prefix: false
