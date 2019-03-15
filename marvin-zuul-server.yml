@@ -21,4 +21,4 @@ zuul:
     produtos:
       path: /produtos/**
       serviceId: marvin-produto-server
-      strip-prefix: true
+      strip-prefix: false
