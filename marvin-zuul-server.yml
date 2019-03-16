@@ -19,7 +19,7 @@ zuul:
   ignored-services: '*'
   routes:
     produtos:
-      path: /produtos/**
+      path: /projetos/**
       serviceId: marvin-produto-server
       strip-prefix: false
     oauth:
